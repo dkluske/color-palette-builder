@@ -37,6 +37,19 @@ function App() {
             return prev.filter((_, i) => i !== index)
         })
     }
+    const randomizeColor = (index) => {
+        setColors((prev) => {
+            if (index < 0 || index >= prev.length) {
+                return prev
+            }
+            return prev.map((color, i) => {
+                if (i === index) {
+                    color.code = generateRandomHexCode()
+                }
+                return color
+            })
+        })
+    }
     useEffect(() => {
         let randomColors = []
         for (let i = 0; i < 5; i++) {
@@ -51,8 +64,16 @@ function App() {
         <>
             <h1>Color Palette Builder</h1>
             <div className="palette-wrapper">
-                {colors.map((color, index) => <ColorEntry color={color} onDelete={() => deleteColor(index)}
-                                                          key={index}/>)}
+                {colors.map((color, index) => <ColorEntry
+                    color={color}
+                    onDelete={() => deleteColor(index)}
+                    key={index}
+                    onEdit={() => {
+                    }}
+                    onRandomize={() => {
+                        randomizeColor(index)
+                    }}
+                />)}
             </div>
             <div className="utility-bar">
                 <UtilityFooter addColor={addColor}/>
