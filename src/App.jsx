@@ -76,6 +76,11 @@ function App() {
             })
         })
     }
+    const randomizeColors = () => {
+        setColors((prev) => {
+            return prev.map(() => ({ code: generateRandomHexCode() }))
+        })
+    }
     useEffect(() => {
         let randomColors = []
         for (let i = 0; i < 5; i++) {
@@ -103,7 +108,7 @@ function App() {
                 />)}
             </div>
             <div className="utility-bar">
-                <UtilityFooter addColor={addColor}/>
+                <UtilityFooter addColor={addColor} randomizeColors={randomizeColors}/>
             </div>
         </>
     )
