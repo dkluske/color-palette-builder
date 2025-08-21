@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.color-code:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .color-button {
     background: none;
     border: none;
