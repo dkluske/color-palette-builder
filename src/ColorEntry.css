@@ -1,0 +1,21 @@
+.color-entry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.color-code {
+    margin-top: auto;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.color-button {
+    background: none;
+    border: none;
+}
+
+.color-buttons {
+    margin-bottom: 8px;
+}

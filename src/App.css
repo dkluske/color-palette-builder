@@ -1,0 +1,28 @@
+#root {
+    width: 100%;
+    text-align: center;
+    /* Make the app fill the viewport and use a column layout */
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+.palette-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Fill the remaining height between header and footer */
+    flex: 1 1 auto;
+    min-height: 0; /* prevent flex overflow issues */
+}
+
+.utility-wrapper {
+    width: 100%;
+    display: flex;
+}

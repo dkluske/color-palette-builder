@@ -1,0 +1,15 @@
+.utility-footer {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.utility-button {
+    border: none;
+    background: none;
+    padding: 12px;
+}
+
+.utility-button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
