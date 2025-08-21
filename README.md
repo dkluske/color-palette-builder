@@ -1,75 +1,73 @@
 # Color Palette Builder
 
-Ein schneller, schlanker und benutzerfreundlicher Generator für eigene Farbpaletten – ideal für Designer:innen,
-Entwickler:innen und alle, die harmonische Farben zusammenstellen möchten.
+A fast, lightweight, and user-friendly generator for custom color palettes — ideal for designers, developers, and anyone
+who wants to compose harmonious colors.
 
-- Live-Demo: https://dkluske.github.io/color-palette-builder
+- Live demo: https://dkluske.github.io/color-palette-builder
 - Stack: React 19, Vite 7, GitHub Pages
 
 ## Features
 
-- Zufallsfarben mit einem Klick: Erstelle direkt eine Palette aus 5 Startfarben und würfle einzelne Einträge neu.
-- Manuelles Bearbeiten: Hex-Code pro Farbe bearbeiten (Akzeptiert `#RRGGBB` oder `RRGGBB`; wird automatisch zu
-  Großbuchstaben normalisiert).
-- Validierung: Ungültige Hex-Codes werden verhindert; hilfreiche Fehlermeldung bei falscher Eingabe.
-- Tastaturkürzel beim Bearbeiten: Enter = Speichern, Escape = Abbrechen.
-- Palette verwalten: Farben hinzufügen (bis zu 10 Einträge) oder löschen (mindestens 1 Farbe bleibt erhalten).
+- Random colors with one click: instantly create a palette of 5 starter colors and re-roll individual entries.
+- Manual editing: edit the hex code per color (accepts `#RRGGBB` or `RRGGBB`; automatically normalized to uppercase).
+- Validation: prevents invalid hex codes; helpful error message on invalid input.
+- Keyboard shortcuts while editing: Enter = Save, Escape = Cancel.
+- Manage the palette: add colors (up to 10 entries) or delete (at least 1 color is always kept).
 
-## Schnellstart
+## Quick start
 
-Voraussetzung: Node.js (empfohlen LTS).
+Prerequisite: Node.js (LTS recommended).
 
-1. Repository klonen oder herunterladen
-2. Abhängigkeiten installieren
+1. Clone or download the repository
+2. Install dependencies
     - `npm install`
-3. Entwicklungsserver starten
+3. Start the development server
     - `npm run dev`
-4. App im Browser öffnen (Vite zeigt die lokale URL in der Konsole an)
+4. Open the app in your browser (Vite prints the local URL in the console)
 
 ## Scripts
 
-- `npm run dev` – Entwicklungsserver starten
-- `npm run build` – Produktionsbuild nach `dist` erzeugen
-- `npm run preview` – lokalen Preview-Server für den Build starten
-- `npm run lint` – Linting ausführen
-- `npm run deploy` – auf GitHub Pages veröffentlichen (baut automatisch via `predeploy`)
+- `npm run dev` — start the development server
+- `npm run build` — create the production build in `dist`
+- `npm run preview` — start a local preview server for the build
+- `npm run lint` — run linting
+- `npm run deploy` — publish to GitHub Pages (automatically builds via `predeploy`)
 
 ## Deployment (GitHub Pages)
 
-Dieses Projekt nutzt `gh-pages` für das Hosting der Produktionsversion aus dem Ordner `dist`.
+This project uses `gh-pages` to host the production build from the `dist` folder.
 
-- Baue und deploye mit einem Befehl: `npm run deploy`
-- Stelle sicher, dass das Repository entsprechend konfiguriert ist (Branch `gh-pages` wird automatisch gepflegt).
+- Build and deploy with a single command: `npm run deploy`
+- Make sure the repository is configured accordingly (the `gh-pages` branch is maintained automatically).
 
-## Technischer Überblick
+## Technical overview
 
-- React 19 (mit Hooks)
-- Vite 7 (schnelles Development & Build)
-- ESLint (inkl. React Hooks Plugin)
+- React 19 (with hooks)
+- Vite 7 (fast development and build)
+- ESLint (including React Hooks plugin)
 
-## Roadmap / Ideen
+## Roadmap / ideas
 
-- Export der Palette (z. B. als JSON, CSS-Variablen, Tailwind-Config)
-- Import von Paletten
-- Unterstützung für HSL/HSV und Farbnamen
-- Kopieren des Hex-Codes per Klick
-- Sharing-Link für Paletten
+- Export the palette (e.g., as JSON, CSS variables, Tailwind config)
+- Import palettes
+- Support for HSL/HSV and color names
+- Copy hex code on click
+- Sharing link for palettes
 
-## Mitwirken (Contributing)
+## Contributing
 
-Beiträge sind willkommen!
+Contributions are welcome!
 
-- Issues: Fehler melden oder Vorschläge machen
-- Pull Requests: Kleine, fokusierte Änderungen mit kurzer Beschreibung
-- Code-Stil: ESLint beachten (`npm run lint`)
+- Issues: report bugs or make suggestions
+- Pull requests: small, focused changes with a short description
+- Code style: follow ESLint (`npm run lint`)
 
-## Lizenz
+## License
 
-Aktuell ist keine Lizenzdatei hinterlegt. Für echte Open-Source-Nutzung empfiehlt sich das Hinzufügen einer
-LICENSE-Datei (z. B. MIT). Wenn du eine konkrete Lizenz wünschst, füge die Datei im Projektroot hinzu und passe diesen
-Abschnitt an.
+There is currently no license file in the repository. For real open-source usage, consider adding a LICENSE file (e.g.,
+MIT). If you want a specific license, add the file to the project root and adjust this section accordingly.
 
-## Danksagung
+## Acknowledgements
 
-- Erstellt mit React und Vite
-- Gehostet via GitHub Pages
+- Built with React and Vite
+- Hosted via GitHub Pages
