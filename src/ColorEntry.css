@@ -23,3 +23,24 @@
 .color-buttons {
     margin-bottom: 8px;
 }
+
+.color-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 4px;
+    margin-top: auto;
+}
+
+.color-input {
+    padding: 4px 8px;
+    margin: 0 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.color-error {
+    color: #b00020;
+    font-size: 12px;
+}

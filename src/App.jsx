@@ -50,6 +50,32 @@ function App() {
             })
         })
     }
+    const updateColor = (index, newCode) => {
+        // Normalize and validate hex color; allow with or without leading '#'
+        let code = String(newCode || '').trim()
+        if (!code) return
+        if (!code.startsWith('#')) {
+            code = '#' + code
+        }
+        // Validate 6-digit hex
+        const match = /^#([0-9a-fA-F]{6})$/.exec(code)
+        if (!match) {
+            return
+        }
+        const normalized = '#' + match[1].toUpperCase()
+        setColors((prev) => {
+            if (index < 0 || index >= prev.length) {
+                return prev
+            }
+            return prev.map((color, i) => {
+                if (i === index) {
+                    // Return a new object to avoid mutating state
+                    return {...color, code: normalized}
+                }
+                return color
+            })
+        })
+    }
     useEffect(() => {
         let randomColors = []
         for (let i = 0; i < 5; i++) {
@@ -68,7 +94,8 @@ function App() {
                     color={color}
                     onDelete={() => deleteColor(index)}
                     key={index}
-                    onEdit={() => {
+                    onEdit={(newCode) => {
+                        updateColor(index, newCode)
                     }}
                     onRandomize={() => {
                         randomizeColor(index)
